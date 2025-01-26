@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Ensure the correct path to your CSS file -->
+</head>
+<body>
+    <div class="error" style="display: none;"></div>
+    <form id="urlForm">
+        <label for="name">Enter URL:</label>
+        <input type="text" id="name" name="name">
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="results">
+        <p id="agreement">Agreement: </p>
+        <p id="confidence">Confidence: </p>
+        <p id="irony">Irony: </p>
+        <p id="score_tag">Score Tag: </p>
+        <div class="lod ">
+            <span class="loader"></span>
+        </div>
+    </div>
+ 
+
+    <script src="bundle.js"></script>
+</body>
+</html>
