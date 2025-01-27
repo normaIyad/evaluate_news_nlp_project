@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const webpack = require('webpack');
+const { GenerateSW } = require('workbox-webpack-plugin'); // Import Workbox plugin
 
 module.exports = {
     entry: './src/client/index.js',
@@ -35,6 +36,11 @@ module.exports = {
         new CleanWebpackPlugin(),
         new webpack.DefinePlugin({
             'process.env.MEANINGCLOUD_API_KEY': JSON.stringify(process.env.MEANINGCLOUD_API_KEY),
+        }),
+        new GenerateSW({
+            clientsClaim: true,
+            skipWaiting: true,
+            // Additional Workbox options can be set here if needed
         }),
     ],
 };

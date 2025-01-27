@@ -1,8 +1,13 @@
 import { isValidUrl } from './valedurl';
 
 // Event listener for the form submission
-const form = document.getElementById('urlForm');
-form.addEventListener('submit', handleSubmit);
+document.addEventListener("DOMContentLoaded" , (e)=>{
+    const form = document.getElementById('urlForm');
+    if(form){
+    form.addEventListener('submit', handleSubmit);
+    }
+} );
+
 
 // Define the handleSubmit function as async
 async function handleSubmit(event) {

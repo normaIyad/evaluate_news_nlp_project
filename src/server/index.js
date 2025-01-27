@@ -49,7 +49,7 @@ app.post('/analyze', async (req, res) => {
 });
 
 // Start the server
-const PORT = 9002;
+const PORT = 9003;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}!`);
     console.log(`http://localhost:${PORT}`);
